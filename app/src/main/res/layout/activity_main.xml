@@ -9,14 +9,133 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ubu.chantharo.nanthiya.findngo.MainActivity">
+    tools:context="ubu.chantharo.nanthiya.findngo.MainActivity"
+    android:background="@drawable/bg">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#82ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    </FrameLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/icon"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:id="@+id/Icon"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/magnifyingglass"
+            android:id="@+id/Search"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/contacts"
+            android:id="@+id/Contacts"
+            android:layout_weight="1" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="false"
+        android:id="@+id/Text"
+        android:layout_below="@+id/Icon"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="ค้นหา"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/Search"
+            android:layout_weight="1.10"
+            android:gravity="center"
+            android:textSize="@dimen/h2"
+            android:padding="6dp"
+            android:paddingEnd="6dp"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:text="สมุดโทรศัพท์"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/Contracts"
+            android:layout_weight="0.32"
+            android:gravity="center"
+            android:textSize="@dimen/h2"
+            android:padding="6dp"
+            android:paddingEnd="6dp"
+            android:textStyle="normal|bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/icon"
+        android:id="@+id/Icon2"
+        android:layout_below="@+id/Text"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/compose"
+            android:id="@+id/Memo"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/power"
+            android:id="@+id/Close"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Text2"
+        android:layout_below="@+id/Icon2">
+
+        <TextView
+            android:text="สมุดบันทึก"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/memory"
+            android:layout_weight="1"
+            android:textSize="@dimen/h2"
+            android:padding="6dp"
+            android:paddingEnd="6dp"
+            android:gravity="center"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:text="ออก"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exit"
+            android:textSize="@dimen/h2"
+            android:layout_weight="1.91"
+            android:padding="6dp"
+            android:paddingEnd="6dp"
+            android:gravity="center"
+            android:textStyle="normal|bold" />
+    </LinearLayout>
+
 </RelativeLayout>
